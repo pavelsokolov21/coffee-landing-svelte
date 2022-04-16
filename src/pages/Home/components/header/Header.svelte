@@ -22,7 +22,6 @@
 
   .header {
     padding: 48px 0;
-    background-color: $secondaryColor;
 
     & > :global(.container) {
       display: flex;
