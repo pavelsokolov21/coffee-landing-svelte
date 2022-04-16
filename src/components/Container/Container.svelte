@@ -1,4 +1,4 @@
-<div class={`container ${$$props.class}`}>
+<div class={`container ${$$props.class ?? ""}`}>
   <slot />
 </div>
 
