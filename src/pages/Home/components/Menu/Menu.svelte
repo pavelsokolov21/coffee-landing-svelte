@@ -8,7 +8,11 @@
 <section class="menu">
   <Container>
     <h2 class="title">Меню</h2>
-    <Carousel class="menu-carousel" maxSlidesOnPage={3}>
+    <Carousel
+      class="menu-carousel"
+      maxSlidesOnPage={3}
+      slidesCount={carouselItems.length}
+    >
       {#each carouselItems as item}
         <CarouselItem {...item} />
       {/each}

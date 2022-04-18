@@ -5,11 +5,11 @@
   import { LEFT_BUTTON, RIGHT_BUTTON } from "./constants";
 
   const state = createCarouselState();
-  const countOfChildren = $$props.$$scope.ctx[0].length;
+  const { slidesCount, maxSlidesOnPage } = $$props;
   let currentState = null;
   let slides;
 
-  state.init(countOfChildren - 2);
+  state.init(slidesCount - 2);
 
   function getSizes() {
     const slidesWidth = slides.offsetWidth;
@@ -24,8 +24,7 @@
   function calculateGap() {
     const { slidesWidth, widthOfSlide } = getSizes();
     const gap =
-      (slidesWidth - widthOfSlide * $$props.maxSlidesOnPage) /
-      ($$props.maxSlidesOnPage - 1);
+      (slidesWidth - widthOfSlide * maxSlidesOnPage) / (maxSlidesOnPage - 1);
 
     return gap;
   }
@@ -99,7 +98,7 @@
     </button>
   </div>
   <ul class="carousel__dots flex">
-    {#each Array(countOfChildren - 2) as _, index}
+    {#each Array(slidesCount - 2) as _, index}
       <li class="carousel__dot">
         <button
           class="carousel__dot-button {index + 1 === currentState.currentSlide
