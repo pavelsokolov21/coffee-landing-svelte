@@ -3,27 +3,13 @@
   import CoffeeCup from "@components/icons/CoffeeCup.svelte";
   import CoffeeBean from "@components/icons/CoffeeBean.svelte";
   import Barista from "@components/icons/Barista.svelte";
+  import { benefits } from "./data";
 
   const embeds = {
     coffeeCup: CoffeeCup,
     coffeeBean: CoffeeBean,
     barista: Barista,
   };
-
-  const benefits = [
-    {
-      title: "можно взять с собой",
-      component: "coffeeCup",
-    },
-    {
-      title: "кофе на любой вкус",
-      component: "coffeeBean",
-    },
-    {
-      title: "профессиональный бариста",
-      component: "barista",
-    },
-  ];
 </script>
 
 <section class="benefits">

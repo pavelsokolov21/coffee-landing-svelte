@@ -1,12 +1,6 @@
 <script>
   import Container from "@components/Container";
-  const imagesUrlPrefix = "/images/offers-week/";
-
-  const imageURLs = [
-    `${imagesUrlPrefix}offer-week-1.png`,
-    `${imagesUrlPrefix}offer-week-2.png`,
-    `${imagesUrlPrefix}offer-week-3.png`,
-  ];
+  import { imageURLs } from "./data";
 </script>
 
 <section class="offer-week">
