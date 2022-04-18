@@ -3,6 +3,7 @@
   import Preview from "./components/Preview";
   import OfferWeek from "./components/OfferWeek";
   import Menu from "./components/Menu";
+  import Benefits from "./components/Benefits";
 </script>
 
 <main>
@@ -10,6 +11,7 @@
   <Preview />
   <OfferWeek />
   <Menu />
+  <Benefits />
 </main>
 
 <style lang="scss">
