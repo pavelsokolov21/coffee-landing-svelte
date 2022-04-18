@@ -2,9 +2,7 @@
   import Home from "@pages/Home";
 </script>
 
-<main>
-  <Home />
-</main>
+<Home />
 
 <style lang="scss">
   :global(body, ul, h1, h2, h3, h4, h5, h6, p) {

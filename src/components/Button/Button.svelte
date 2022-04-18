@@ -2,9 +2,13 @@
   import { TYPE_STANDARD } from "./constants";
 
   export let type = TYPE_STANDARD;
+  export let onClick = () => {
+    console.log("Default click");
+  };
 </script>
 
 <button
+  on:click={onClick}
   class="button {$$props.class ?? ''} {type === TYPE_STANDARD
     ? 'button_standard'
     : 'button_transparent-bg'}"

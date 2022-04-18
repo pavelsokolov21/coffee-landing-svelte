@@ -1,11 +1,19 @@
 <script>
+  import { onMount } from "svelte";
   import Container from "@components/Container";
   import Carousel from "@components/Carousel";
+  import { refsStore } from "@stores/refsStore";
   import CarouselItem from "./CarouselItem";
   import { carouselItems } from "./data";
+
+  let menuLink;
+
+  onMount(() => {
+    refsStore.updateRef("menu", menuLink);
+  });
 </script>
 
-<section class="menu">
+<section class="menu" bind:this={menuLink}>
   <Container>
     <h2 class="title">Меню</h2>
     <Carousel

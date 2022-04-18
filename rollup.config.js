@@ -70,6 +70,10 @@ export default {
           replacement: path.resolve(__dirname, "src/layouts"),
         },
         {
+          find: "@stores",
+          replacement: path.resolve(__dirname, "src/stores"),
+        },
+        {
           find: "@styles",
           replacement: path.resolve(__dirname, "src/styles"),
         },

@@ -1,7 +1,14 @@
 <script>
   import Container from "@components/Container";
   import Button, { TYPE_TRANSPARENT_BG } from "@components/Button";
+  import { refsStore } from "@stores/refsStore";
   import Chevron from "@components/icons/Chevron.svelte";
+
+  function handleScrollToMenu() {
+    const menuRef = refsStore.getRefByName("menu");
+
+    menuRef.scrollIntoView({ behavior: "smooth" });
+  }
 </script>
 
 <section class="preview">
@@ -11,8 +18,10 @@
       <h4 class="sub-title">всегда самый вкусный</h4>
     </div>
     <Button class="order-button">Заказать</Button>
-    <Button class="button-chevron" type={TYPE_TRANSPARENT_BG}
-      ><Chevron /></Button
+    <Button
+      class="button-chevron"
+      type={TYPE_TRANSPARENT_BG}
+      onClick={handleScrollToMenu}><Chevron /></Button
     >
   </Container>
 </section>
