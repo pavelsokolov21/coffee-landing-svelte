@@ -1,6 +1,6 @@
 <script>
   import Container from "@components/Container";
-  import Button from "@components/Button";
+  import Button, { TYPE_TRANSPARENT_BG } from "@components/Button";
   import Chevron from "@components/icons/Chevron.svelte";
 </script>
 
@@ -10,8 +10,10 @@
       <h1 class="title">горячий кофе -</h1>
       <h4 class="sub-title">всегда самый вкусный</h4>
     </div>
-    <Button class="button_standard">Заказать</Button>
-    <Button class="button_transparent-bg button-chevron"><Chevron /></Button>
+    <Button class="order-button">Заказать</Button>
+    <Button class="button-chevron" type={TYPE_TRANSPARENT_BG}
+      ><Chevron /></Button
+    >
   </Container>
 </section>
 
@@ -22,7 +24,7 @@
     padding: 75px 0 100px 0;
     background: right top no-repeat url("/images/coffee-beans.png");
 
-    :global(.button_standard) {
+    :global(.order-button) {
       max-width: 322px;
       margin-top: 80px;
     }

@@ -1,4 +1,14 @@
-<button class="button {$$props.class ?? ''}">
+<script>
+  import { TYPE_STANDARD } from "./constants";
+
+  export let type = TYPE_STANDARD;
+</script>
+
+<button
+  class="button {$$props.class ?? ''} {type === TYPE_STANDARD
+    ? 'button_standard'
+    : 'button_transparent-bg'}"
+>
   <slot />
 </button>
 

@@ -1,4 +1,10 @@
-<div class="logo">
+<script>
+  import { TYPE_BROWN } from "./constants";
+
+  export let type = TYPE_BROWN;
+</script>
+
+<div class={`logo ${type === TYPE_BROWN ? "logo_brown" : "logo_white"}`}>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="136"
@@ -12,3 +18,21 @@
     />
   </svg>
 </div>
+
+<style lang="scss">
+  @import "variables.scss";
+
+  .logo {
+    &_brown {
+      path {
+        fill: $mainColor;
+      }
+    }
+
+    &_white {
+      path {
+        fill: $secondaryColor;
+      }
+    }
+  }
+</style>

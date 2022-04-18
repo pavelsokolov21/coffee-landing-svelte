@@ -1,0 +1,2 @@
+export const TYPE_STANDARD = "STANDARD";
+export const TYPE_TRANSPARENT_BG = "TRANSPARENT_BG";

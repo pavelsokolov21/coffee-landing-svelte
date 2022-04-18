@@ -28,4 +28,8 @@
   :global(.flex) {
     display: flex;
   }
+
+  :global(.grid) {
+    display: grid;
+  }
 </style>
